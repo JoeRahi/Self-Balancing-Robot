@@ -1,103 +1,51 @@
-Self-Balancing Robot with PID Control
+# Self-Balancing Robot
 
-This project involves building a self-balancing robot that uses a PID control algorithm and an MPU6050 IMU sensor to maintain balance. The robot continuously adjusts its motor speeds to stay upright, mimicking the balancing mechanism of a Segway.
+This is a Self-Balancing Robot project that uses a PID control algorithm and an MPU6050 IMU sensor to maintain balance on two wheels. The robot adjusts its motor speeds to remain upright, similar to how a Segway functions.
 
-Features
+## Features
+- **PID Control**: Proportional-Integral-Derivative (PID) algorithm to stabilize the robot's tilt.
+- **IMU Sensor**: MPU6050 accelerometer and gyroscope to measure the robot's tilt angle.
+- **Arduino**: Arduino Uno board for processing sensor data and controlling the motors.
 
-PID Control: Uses Proportional-Integral-Derivative (PID) control to stabilize the robot.
+## Hardware Components
+- **Arduino Uno**
+- **L298N Motor Driver**
+- **MPU6050 Gyroscope + Accelerometer**
+- **6V DC Motors with Encoders**
+- **RC Racing Wheels**
+- **9V Battery or 2x 18650 Li-ion Batteries**
+- **Laser Cut Plexiglass Chassis**
 
-IMU Sensor: Utilizes the MPU6050 accelerometer and gyroscope to measure the tilt angle.
+## Software Requirements
+- **Arduino IDE**
+- **Libraries**:
+  - `PID_v1`
+  - `MPU6050`
+  - `I2Cdev`
 
-Arduino Uno: The microcontroller that processes sensor data and controls the motors.
+## How to Build
 
-Automatic Balancing: The robot adjusts its motor speeds based on tilt data to maintain an upright position.
+### Assemble Hardware:
+- Mount the motors, sensors, and Arduino on the chassis.
+- Wire the motor driver and MPU6050 sensor to the Arduino.
 
-PID Tuning: Adjust PID constants for fine-tuning the robot's performance.
+### Install Libraries:
+- Open Arduino IDE and install the necessary libraries (`PID_v1`, `MPU6050`, `I2Cdev`).
 
-Hardware Components
+### Upload Code:
+- Upload the code to the Arduino from this repository.
 
-Arduino Uno: The main controller for processing sensor data and controlling motors.
+## Usage
+Once powered on, the robot will automatically balance itself by adjusting the motor speeds based on the tilt data from the MPU6050 sensor.
 
-L298N Motor Driver: Controls the direction and speed of the DC motors.
+## PID Tuning
+The PID constants (Kp, Ki, Kd) are adjustable for fine-tuning the robot's performance. Experiment with these constants to improve stability, especially for different weights and chassis designs.
 
-MPU6050: The gyroscope and accelerometer that measure the robot’s tilt angle.
+## Robot Image
+![Self-Balancing Robot](Self-Balancing-Robot/robot.jpeg)
 
-DC Motors with Encoders: Powers the wheels and enables movement.
+## Closed-Loop System Diagram
+![Closed-Loop System Diagram](Self-Balancing-Robot/block diagram.PNG)
 
-RC Racing Wheels: Provides the wheels for the robot.
-
-Battery: 9V or 2x 18650 Li-ion batteries for power.
-
-Chassis: Laser-cut Plexiglass chassis for mounting the components.
-
-Wires, Screws, and Mounting Brackets: For assembly.
-
-Software Requirements
-
-Arduino IDE: To write and upload the code to the Arduino board.
-
-Libraries Needed
-
-PID_v1
-
-MPU6050
-
-I2Cdev
-
-How It Works
-
-The MPU6050 sensor measures the tilt angle of the robot.
-
-The PID control algorithm processes the tilt data and calculates the necessary motor adjustments to maintain balance.
-
-The Arduino continuously adjusts the motor speeds to correct the robot’s position and keep it upright.
-
-Code Overview
-
-The Arduino code does the following:
-
-Reads data from the MPU6050 sensor to determine the robot's tilt angle.
-
-Implements the PID algorithm to compute the necessary adjustments for motor speeds.
-
-Controls the motors through the L298N motor driver to keep the robot balanced.
-
-PID Tuning
-
-The robot’s performance can be fine-tuned by adjusting the following PID constants:
-
-Kp (Proportional): Controls the robot’s response to tilt.
-
-Ki (Integral): Helps correct long-term errors.
-
-Kd (Derivative): Damps out oscillations and smoothens the response.
-
-Experiment with these constants to optimize the robot’s stability, especially for different weights and designs.
-
-Getting Started
-1. Hardware Setup:
-
-Mount the motors, sensor, and Arduino on the chassis.
-
-Wire the motor driver (L298N) and MPU6050 to the Arduino according to the provided circuit diagram.
-
-2. Software Setup:
-
-Install the required libraries in the Arduino IDE: PID_v1, MPU6050, I2Cdev.
-
-Upload the provided code to the Arduino Uno.
-
-3. Testing the Robot:
-
-Power the robot on and ensure the MPU6050 sensor is properly aligned.
-
-The robot should automatically begin balancing by adjusting the motor speeds.
-
-Project Visuals
-Self-Balancing Robot
-
-Closed-Loop System Diagram
-
-License
-
-This project is open-source and available under the MIT License. See the LICENSE file for more details.
+## License
+This project is licensed under the MIT License.
