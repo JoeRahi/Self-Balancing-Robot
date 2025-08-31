@@ -45,7 +45,7 @@ The PID constants (Kp, Ki, Kd) are adjustable for fine-tuning the robot's perfor
 <img src="robot.jpeg" width="50%" />
 
 ## Closed-Loop System Diagram
-![Block Diagram](block%20diagram.PNG)
+<img src="block%20diagram.PNG" width="50%" />
 
 ## License
 This project is licensed under the MIT License.
