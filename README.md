@@ -11,7 +11,7 @@ This project showcases a **Self-Balancing Robot** that uses a **PID control algo
 ## Visuals
 
 ### Robot Image
-<img src="robot.jpeg" width="55%">
+<img src="robot.jpeg" width="50%">
 
 ### Closed-Loop System Diagram
 <img src="block%20diagram.PNG" width="50%">
