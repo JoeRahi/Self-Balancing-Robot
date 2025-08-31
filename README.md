@@ -42,7 +42,7 @@ Once powered on, the robot will automatically balance itself by adjusting the mo
 The PID constants (Kp, Ki, Kd) are adjustable for fine-tuning the robot's performance. Experiment with these constants to improve stability, especially for different weights and chassis designs.
 
 ## Robot Image
-![Self-Balancing Robot](robot.jpeg)
+<img src="robot.jpeg" width="50%" />
 
 ## Closed-Loop System Diagram
 ![Closed-Loop System Diagram](block diagram.PNG)
