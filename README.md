@@ -1,16 +1,16 @@
 Self-Balancing Robot
 
-This is a Self-Balancing Robot project that uses a PID control algorithm and an MPU6050 IMU sensor to maintain balance on two wheels. The robot adjusts its motor speeds to remain upright, similar to how a Segway functions.
+This project implements a Self-Balancing Robot that uses a PID control algorithm and an MPU6050 IMU sensor to maintain balance on two wheels. The robot adjusts its motor speeds to stay upright, similar to how a Segway works.
 
 Project Overview
 
 The self-balancing robot features:
 
-PID Control: Proportional-Integral-Derivative (PID) algorithm to stabilize the robot's tilt.
+PID Control: Utilizes a Proportional-Integral-Derivative (PID) algorithm to stabilize the robot's tilt.
 
-IMU Sensor: MPU6050 accelerometer and gyroscope to measure the robot's tilt angle.
+IMU Sensor: Uses the MPU6050 accelerometer and gyroscope to measure the robot's tilt angle.
 
-Arduino: Arduino Uno board for processing sensor data and controlling the motors.
+Arduino: An Arduino Uno board is used for processing sensor data and controlling the motors.
 
 Hardware Components
 
@@ -43,20 +43,25 @@ MPU6050
 I2Cdev
 
 How to Build
-
-Assemble Hardware:
+1. Assemble Hardware:
 
 Mount the motors, sensors, and Arduino on the chassis.
 
-Wire the motor driver and MPU6050 sensor to the Arduino.
+Wire the motor driver (L298N) and MPU6050 sensor to the Arduino Uno.
 
-Install Libraries:
+2. Install Libraries:
 
-Open Arduino IDE and install the necessary libraries (PID_v1, MPU6050, I2Cdev).
+Open the Arduino IDE and install the necessary libraries:
 
-Upload Code:
+PID_v1
 
-Upload the code to the Arduino from this repository.
+MPU6050
+
+I2Cdev
+
+3. Upload Code:
+
+Upload the provided code from this repository to the Arduino board.
 
 Usage
 
@@ -64,7 +69,7 @@ Once powered on, the robot will automatically balance itself by adjusting the mo
 
 PID Tuning
 
-The PID constants (Kp, Ki, Kd) are adjustable for fine-tuning the robot's performance. Experiment with these constants to improve stability, especially for different weights and chassis designs.
+The PID constants (Kp, Ki, Kd) are adjustable to fine-tune the robot's performance. Experiment with different values to improve stability, especially for various chassis designs and weights.
 
 Robot Image
 
@@ -72,4 +77,5 @@ Closed-Loop System Diagram
 
 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License
+.
